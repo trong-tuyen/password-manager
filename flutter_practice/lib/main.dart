@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/welcome_page.dart';
+import 'pages/home_page.dart';
+import 'package:flutter_practice/pages/welcome_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,6 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: '/', // this is 'root'
+      routes: {
+        '/HomePage': (context) => HomePage(),
+        // '/WelComePage': (context) => WelcomePage(),
+      },
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -23,7 +27,11 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+
+        // scaffoldBackgroundColor: Color.fromARGB(255, 207, 12, 241),
+        scaffoldBackgroundColor: Color(0xffAA88F9),
+        // colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+        //     .copyWith(secondary: Colors.pink),
       ),
       home: WelcomePage(),
     );
