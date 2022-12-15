@@ -32,7 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^10.3.0
-  widgetbook: ^2.4.1
+
   device_preview: ^1.1.0
 
   # The following adds the Cupertino Icons font to your application.
@@ -42,6 +42,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  widgetbook: ^2.4.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

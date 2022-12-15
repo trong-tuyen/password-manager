@@ -17,22 +17,6 @@ class MyApp extends StatelessWidget {
         '/HomePage': (context) => HomePage(),
         // '/WelComePage': (context) => WelcomePage(),
       },
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-
-        // scaffoldBackgroundColor: Color.fromARGB(255, 207, 12, 241),
-        scaffoldBackgroundColor: Color(0xffAA88F9),
-        // colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-        //     .copyWith(secondary: Colors.pink),
-      ),
       home: WelcomePage(),
     );
   }

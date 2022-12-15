@@ -1,19 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter_practice/pages/home_page.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../models/user.dart';
+import '../views/user_list.dart';
 import 'package:flutter_practice/validators/validators.dart';
 
 class WelcomePage extends StatefulWidget {
   static const String routeName = '/WelcomePage';
 
-  const WelcomePage({super.key});
-
   @override
   _WelcomePageState createState() => _WelcomePageState();
 }
 
-class _WelcomePageState extends State<WelcomePage> {
+class _WelcomePageState extends State<WelcomePage> with WidgetsBindingObserver {
   final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
   final _emailController = TextEditingController();
@@ -21,6 +22,17 @@ class _WelcomePageState extends State<WelcomePage> {
   //define states
   User _user = User(email: '', password: '');
   final List<User> _users = <User>[];
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
+  }
 
   void _insertUser() {
     if (_user.email!.isEmpty || _user.password!.isEmpty) {
@@ -157,21 +169,11 @@ class _WelcomePageState extends State<WelcomePage> {
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: AnimatedContainer(
+        body: SingleChildScrollView(
+      child: AnimatedContainer(
         duration: const Duration(seconds: 3),
         child: Center(
             child: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.center,
-              colors: <Color>[
-                Color(0xffAA88F9),
-                Color(0xff7150F1),
-              ], // Gradient from https://learnui.design/tools/gradient-generator.html
-              tileMode: TileMode.clamp,
-            ),
-          ),
           padding: EdgeInsets.symmetric(vertical: 50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -317,15 +319,6 @@ class _WelcomePageState extends State<WelcomePage> {
                   width: size.width * 0.9,
                   child: Container(
                     decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          begin: Alignment.topRight,
-                          end: Alignment(0.9, 1),
-                          colors: <Color>[
-                            Color(0xffAA88F9),
-                            Color(0xff7150F1),
-                          ], // Gradient from https://learnui.design/tools/gradient-generator.html
-                          tileMode: TileMode.clamp,
-                        ),
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: Colors.white, width: 2)),
                     child: MaterialButton(
@@ -334,6 +327,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         onPressed: () {
                           _onButtonShowModalSheet('login');
                         },
+                        color: const Color.fromARGB(255, 207, 12, 241),
                         child: const Text("Sign In",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 21))),
@@ -342,6 +336,6 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
         )),
       ),
-    );
+    ));
   }
 }
