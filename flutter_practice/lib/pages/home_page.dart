@@ -19,7 +19,7 @@ class HomePage extends StatefulWidget {
 }
 
 //This is a "very basic" statefulwidget
-class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
+class _HomePageState extends State<HomePage> {
   final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
   final _nameController = TextEditingController();
@@ -31,18 +31,6 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   Password _record_Password =
       Password(name: '', password: '', category: '', link: '');
   final List<Password> _record_Passwords = <Password>[];
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addObserver(this);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    WidgetsBinding.instance.removeObserver(this);
-  }
 
   void _insertTransaction() {
     if (_record_Password.name!.isEmpty ||
@@ -121,6 +109,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                     children: [
                       Expanded(
                           child: SizedBox(
+                        height: 50,
                         child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
@@ -143,11 +132,11 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                               });
                               Navigator.of(context).pop();
                             }),
-                        height: 50,
                       )),
                       Padding(padding: EdgeInsets.only(left: 10)),
                       Expanded(
                           child: SizedBox(
+                        height: 50,
                         child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
@@ -167,7 +156,6 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                               print('Press cancel');
                               Navigator.of(context).pop();
                             }),
-                        height: 50,
                       ))
                     ],
                   ))

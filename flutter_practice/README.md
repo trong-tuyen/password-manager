@@ -1,16 +1,25 @@
-# flutter_practice
+# Password Manager: A Password Manager built using Flutter!
 
-A new Flutter project.
+### It is first open source Password Manager made using Flutter!
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Password Manager is a password manager built using Flutter.It securely stores the passwords and protect them.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+A Master Password is used to encrypt the passwords and it can be only decrypted using it.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## FeatureS:
+
+- [ ] Basic Password Store
+- [X] User can login with email and password
+- [X] User can register new account
+- [X] User can see a list of saved password
+- [X] User can filter passwords by type software or cards
+- [X] User can add new password
+
+## Screenshots
+
+<img src="./assets/images/Welcome.jpg" width="200px" height="411px"/>
+<img src="./assets/images/Home.jpg" width="200px" height="411px" />
+
+

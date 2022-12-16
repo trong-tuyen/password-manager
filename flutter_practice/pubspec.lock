@@ -356,7 +356,7 @@ packages:
     source: hosted
     version: "2.1.2"
   widgetbook:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: widgetbook
       url: "https://pub.dartlang.org"
