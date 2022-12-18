@@ -167,16 +167,42 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
-          title: const Text('Transaction manager'),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Row(
+            children: const [
+              Text('All',
+                  style: TextStyle(
+                      color: Color(0xff6F6F6F),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins')),
+              SizedBox(
+                width: 20,
+              ),
+              Text('Recent',
+                  style: TextStyle(
+                      color: Color(0xff6F6F6F),
+                      fontSize: 16,
+                      fontFamily: 'Poppins'))
+            ],
+          ),
           actions: [
-            IconButton(
-                onPressed: () {
-                  setState(() {
-                    _onButtonShowModalSheet();
-                  });
-                },
-                icon: const Icon(Icons.add))
+            FloatingActionButton(
+              tooltip: 'Add transaction',
+              child: Image.asset(
+                'assets/images/filter.png',
+                width: 40,
+                height: 40,
+              ),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              onPressed: () {
+                _onButtonShowModalSheet();
+              },
+            ),
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -188,39 +214,16 @@ class _HomePageState extends State<HomePage> {
         ),
         key: scaffoldMessengerKey,
         body: SafeArea(
-            minimum: const EdgeInsets.only(left: 20, right: 20),
-            child: SingleChildScrollView(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                ),
-                ButtonTheme(
-                    height: 30,
-                    child: TextButton(
-                      child: const Text('Insert Transaction',
-                          style: TextStyle(fontSize: 18)),
-                      style: TextButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          backgroundColor: Color.fromARGB(255, 225, 94, 138),
-                          textStyle: const TextStyle(fontSize: 20)),
-                      onPressed: () {
-                        //print('Content = $_content, money\'s amount = $_amount');
-                        //Display to UI ?
-
-                        _onButtonShowModalSheet();
-
-                        scaffoldMessengerKey.currentState
-                            ?.showSnackBar(SnackBar(
-                          content:
-                              Text('Transaction list : $_record_Passwords'),
-                          duration: const Duration(seconds: 3),
-                        ));
-                      },
-                    )),
-                PasswordList(passwords: _record_Passwords)
-              ],
-            ))));
+          child: SingleChildScrollView(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              // const Padding(
+              //   padding: EdgeInsets.symmetric(vertical: 10),
+              // ),
+              PasswordList(passwords: _record_Passwords)
+            ],
+          )),
+        ));
   }
 }

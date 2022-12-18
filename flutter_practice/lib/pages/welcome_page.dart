@@ -177,177 +177,164 @@ class _WelcomePageState extends State<WelcomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Stack(
-                  alignment: const Alignment(0.6, 0.6),
-                  children: [
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Padding(
-                              padding: const EdgeInsets.only(left: 60),
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/images/shield.png',
-                                      width: 100, height: 100),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.only(left: 60, bottom: 55),
+                          child: Stack(
+                            children: [
+                              Image.asset('assets/images/shield.png',
+                                  width: 100, height: 100),
+                            ],
+                          )),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 100),
+                          child: Row(
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text("PASSWORD",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins')),
+                                  Text("MANAGER",
+                                      textAlign: TextAlign.right,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 22,
+                                          fontFamily: 'Poppins')),
                                 ],
-                              )),
-                          Padding(
-                              padding: const EdgeInsets.only(left: 10),
-                              child: Row(
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: const [
-                                      Text("PASSWORD",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 25,
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: 'Poppins')),
-                                      Text("MANAGER",
-                                          textAlign: TextAlign.right,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 22,
-                                              fontFamily: 'Poppins')),
-                                    ],
-                                  ),
-                                ],
-                              )),
-                        ],
-                      ),
-                    ),
-                    Image.asset('assets/images/fill.png',
-                        width: 100, height: 100),
-                  ],
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(24.0, 8, 24, 8),
-                  child: Text("Transparent & Secured.",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 31,
-                          // fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins')),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 66, right: 66),
-                  child: Text(
-                    "Only you can see your personal data",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 18,
-                        color: Color(0xff85C9FF)
-                        // color: Colors.black54
-                        ),
+                              ),
+                            ],
+                          )),
+                    ],
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 30),
-                  child: Text(
-                    "Login with",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontFamily: 'Poppins', fontSize: 18, color: Colors.white
-                        // color: Colors.black54
-                        ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
+                Column(
                   children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 140),
-                      child: Image.asset(
-                        'assets/images/facebook.png',
-                        width: 45,
-                        height: 45,
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(24.0, 8, 24, 8),
+                      child: Text("Transparent & Secured.",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 31,
+                              // fontWeight: FontWeight.bold,
+                              fontFamily: 'Poppins')),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 66, right: 66),
+                      child: Text(
+                        "Only you can see your personal data",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontSize: 18,
+                            color: Color(0xff85C9FF)
+                            // color: Colors.black54
+                            ),
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Image.asset(
-                        'assets/images/gmail.png',
-                        width: 40,
-                        height: 40,
+                    const Padding(
+                      padding: EdgeInsets.only(top: 30),
+                      child: Text(
+                        "Login with",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: 'Poppins',
+                            fontSize: 18,
+                            color: Colors.white
+                            // color: Colors.black54
+                            ),
                       ),
                     ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(24.0, 8, 24, 8),
-                  child: Text("Or",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                          color: Colors.white70)),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: 50,
-                  width: size.width * 0.9,
-                  child: MaterialButton(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                      onPressed: () {
-                        _onButtonShowModalSheet('register');
-                      },
-                      color: primaryColor,
-                      child: const Text("Create New Account",
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(left: 140),
+                          child: Image.asset(
+                            'assets/images/facebook.png',
+                            width: 45,
+                            height: 45,
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Image.asset(
+                            'assets/images/gmail.png',
+                            width: 40,
+                            height: 40,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(24.0, 8, 24, 8),
+                      child: Text("Or",
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                               fontFamily: 'Poppins',
-                              color: Colors.white,
-                              fontSize: 17))),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                    height: 50,
-                    width: size.width * 0.9,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          // gradient: const LinearGradient(
-                          //   begin: Alignment.topRight,
-                          //   end: Alignment(0, 0),
-                          //   colors: <Color>[
-                          //     Color(0xffAA88F9),
-                          //     Color(0xff7150F1),
-                          //   ], // Gradient from https://learnui.design/tools/gradient-generator.html
-                          //   tileMode: TileMode.clamp,
-                          // ),
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Colors.white, width: 1)),
+                              fontSize: 18,
+                              color: Colors.white70)),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      height: 50,
+                      width: size.width * 0.9,
                       child: MaterialButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            _onButtonShowModalSheet('login');
+                            _onButtonShowModalSheet('register');
                           },
-                          child: const Text("Sign In",
+                          color: primaryColor,
+                          child: const Text("Create New Account",
                               style: TextStyle(
                                   fontFamily: 'Poppins',
                                   color: Colors.white,
                                   fontSize: 17))),
-                    )),
-                const SizedBox(
-                  height: 20,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                        height: 50,
+                        width: size.width * 0.9,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border:
+                                  Border.all(color: Colors.white, width: 1)),
+                          child: MaterialButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              onPressed: () {
+                                _onButtonShowModalSheet('login');
+                              },
+                              child: const Text("Sign In",
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white,
+                                      fontSize: 17))),
+                        )),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                  ],
                 ),
               ],
             ),

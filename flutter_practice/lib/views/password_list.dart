@@ -6,61 +6,102 @@ class PasswordList extends StatelessWidget {
   final List<Password>? passwords;
 
   const PasswordList({this.passwords});
+
   ListView _buildListView() {
     return ListView.builder(
         itemCount: passwords?.length,
         itemBuilder: (context, index) {
           return Card(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              color: (index) % 2 == 0 ? Colors.green : Colors.teal,
-              elevation: 10,
               child: Row(
-                // mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(10),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Padding(padding: EdgeInsets.only(top: 10)),
-                      Text(
-                        passwords![index].name ?? 'tuyen',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: Colors.white),
-                      ),
-                      const Text(
-                        'Date:',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
-                      ),
-                      const Padding(padding: EdgeInsets.only(top: 10)),
-                    ],
-                  ),
-                  Expanded(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                          padding: const EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Colors.white,
-                                  width: 2,
-                                  style: BorderStyle.solid),
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(10))),
-                          child: Text('${passwords![index].password}',
-                              style: const TextStyle(
-                                  fontSize: 18, color: Colors.white))),
-                      const Padding(padding: EdgeInsets.only(right: 10)),
-                    ],
-                  ))
-                ],
-              ));
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(
+                left: 37,
+              )),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/images/twitter.png',
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 20)),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Twitter',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 16,
+                                  color: Color(0xff3E3E3E)),
+                            ),
+                            Padding(padding: EdgeInsets.only(top: 2)),
+                            Row(
+                              children: [
+                                Text(
+                                  passwords![index].name ?? 'Media',
+                                  style: const TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 14,
+                                      color: Color(0xff898989)),
+                                ),
+                                Padding(padding: EdgeInsets.only(left: 30)),
+                                Text(
+                                  '******',
+                                  style: const TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 14,
+                                      color: Color(0xff898989)),
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    // const Padding(padding: EdgeInsets.only(top: 20)),
+
+                    const Padding(padding: EdgeInsets.only(top: 10)),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.start,
+                    //   children: [
+                    //     MaterialButton(
+                    //         shape: RoundedRectangleBorder(
+                    //             borderRadius: BorderRadius.circular(20)),
+                    //         onPressed: () {
+                    //           // _onButtonShowModalSheet('login');
+                    //         },
+                    //         color: Colors.purple,
+                    //         child: const Text("Open app",
+                    //             style: TextStyle(
+                    //                 fontFamily: 'Poppins',
+                    //                 color: Colors.white,
+                    //                 fontSize: 12))),
+                    //     Padding(padding: EdgeInsets.only(right: 10)),
+                    //     MaterialButton(
+                    //         shape: RoundedRectangleBorder(
+                    //           borderRadius: BorderRadius.circular(20),
+                    //           side: BorderSide(color: Colors.purple, width: 1),
+                    //         ),
+                    //         onPressed: () {},
+                    //         child: const Text("Open web",
+                    //             style: TextStyle(
+                    //                 fontFamily: 'Poppins',
+                    //                 color: Color(0xff9271F5),
+                    //                 fontSize: 12))),
+                    //   ],
+                    // )
+                  ],
+                ),
+              )
+            ],
+          ));
         });
   }
 
