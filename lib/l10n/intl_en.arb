@@ -1,0 +1,62 @@
+{
+    "loginTitle": "Log In",
+    "registerTitle": "Register",
+    "textFieldEmail": "Email",
+    "textFieldPassword": "Password",
+    "textFieldUsername": "Username",
+    "textFieldConfirmPassword": "Confirm Password",
+    "signUpPageTitle": "Sign Up",
+    "loginPageTitle": "Log In",
+    "forgotPassword": "Forgot Password",
+
+    "password": "password",
+    "manager": "manager",
+    "headingFirst": "Transparent & Secured.",
+    "contextFirst": "Only you can see your personal data",
+
+    "loginwith": "Login with",
+    "or": "Or",
+    "singupTitleButton": "Create New Account",
+    "loginTitleButton": "Sign In",
+
+    "typeCardFirst": "Favorites",
+    "typeCardSecond": "Softwares",
+    "typeCardThird": "Credit Card",
+    "all": "All",
+    "recent": "Recent",
+    "save": "Save",
+    "login": " Login",
+    "cancel": "Cancel",
+
+
+    "notification": "Notification",
+    "loginFailed": "Login failed",
+    "success": "Success",
+    "registerFailed": "Register failed",
+    "addCardPasswordFailed": "Add card password failed",
+    "listPasswordBlank": "List Password is blank",
+    "MFAPasswordWrong": "MFA Password wrong! ",
+
+    "webperts": "webperts",
+    "emailExample": "email@example.com",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "dontHaveAnAccount": "Don`t have an account? ",
+    "oke": "Oke",
+    "MFAPassword": "MFA password",
+    "titleMFAPassword": "Multi-Factor Authentication",
+    "openApp": "Open app",
+    "openWeb": "Open web",
+
+    "logout": "Log Out",
+    "messageLogout": "Are you sure you want to log out?"
+
+
+
+
+
+
+
+
+}
+
+

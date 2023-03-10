@@ -3,9 +3,9 @@ import 'package:widgetbook/widgetbook.dart';
 import 'package:flutter_practice/themes/dark_theme.dart';
 import 'package:flutter_practice/themes/light_theme.dart';
 import 'package:flutter_practice/widgets/record_password.dart';
-import 'package:flutter_practice/widgets/logo.dart';
-import 'package:flutter_practice/widgets/icon_login.dart';
+import 'package:flutter_practice/widgets/icon_app.dart';
 import 'package:flutter_practice/widgets/text_content.dart';
+import 'package:flutter_practice/widgets/button.dart';
 
 void main() {
   runApp(
@@ -24,15 +24,22 @@ class WidgetbookHotReload extends StatelessWidget {
           name: 'widgets',
           widgets: [
             WidgetbookComponent(
-              name: '$IconLogin',
+              name: 'Icon App',
               useCases: [
                 WidgetbookUseCase(
+                  name: 'Shield',
+                  builder: (context) => IconApp('assets/images/shield.png',
+                      EdgeInsets.only(left: 60, bottom: 70)),
+                ),
+                WidgetbookUseCase(
                   name: 'Facebook',
-                  builder: (context) => IconLogin(),
+                  builder: (context) => IconApp(
+                      'assets/images/facebook.png', EdgeInsets.only(left: 140)),
                 ),
                 WidgetbookUseCase(
                   name: 'Gmail',
-                  builder: (context) => IconLogin(),
+                  builder: (context) => IconApp(
+                      'assets/images/gmail.png', EdgeInsets.only(left: 20)),
                 ),
               ],
             ),
@@ -41,7 +48,7 @@ class WidgetbookHotReload extends StatelessWidget {
               useCases: [
                 WidgetbookUseCase(
                   name: 'Twiter',
-                  builder: (context) =>RecordPassword(),
+                  builder: (context) => RecordPassword(),
                 ),
               ],
             ),
@@ -49,16 +56,50 @@ class WidgetbookHotReload extends StatelessWidget {
               name: 'Text content',
               useCases: [
                 WidgetbookUseCase(
-                  name: 'Services',
-                  builder: (context) => TextContent(),
+                  name: 'PASSWORD',
+                  builder: (context) => TextContent(
+                      'PASSWORD', Colors.white, 25, FontWeight.bold),
+                ),
+                WidgetbookUseCase(
+                  name: 'MANAGER',
+                  builder: (context) => TextContent(
+                      'MANAGER', Colors.white, 22, FontWeight.normal),
+                ),
+                WidgetbookUseCase(
+                  name: 'Transparent & Secured.',
+                  builder: (context) => TextContent(
+                      'Transparent & Secured.', null, 31, FontWeight.normal),
+                ),
+                WidgetbookUseCase(
+                  name: 'Only you can see your personal data',
+                  builder: (context) => TextContent(
+                      'Only you can see your personal data',
+                      Color(0xff85C9FF),
+                      18,
+                      FontWeight.normal),
+                ),
+                WidgetbookUseCase(
+                  name: 'Login with',
+                  builder: (context) =>
+                      TextContent('Login with', null, 18, FontWeight.normal),
+                ),
+                WidgetbookUseCase(
+                  name: 'Or',
+                  builder: (context) =>
+                      TextContent('Or', Colors.white70, 18, FontWeight.normal),
                 ),
               ],
             ),
             WidgetbookComponent(
-              name: '$Logo',
+              name: 'Button',
               useCases: [
                 WidgetbookUseCase(
-                    name: 'Logo', builder: (context) => const Logo()),
+                    name: 'Create New Account',
+                    builder: (context) =>
+                        Button('Create New Account', Colors.blue)),
+                WidgetbookUseCase(
+                    name: 'Sing In',
+                    builder: (context) => const Button('Sing In', null)),
               ],
             ),
           ],

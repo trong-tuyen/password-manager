@@ -1,0 +1,75 @@
+name: flutter_practice
+
+description: A new Flutter project.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+    sdk: ">=2.18.4 <3.0.0"
+dependencies:
+    flutter:
+        sdk: flutter
+    flutter_localizations:
+        sdk: flutter
+    font_awesome_flutter: 10.3.0
+    url_launcher: 6.1.7
+    url_launcher_web: ^2.0.15
+    device_preview: 1.1.0
+    http: 0.13.5
+    intl: ^0.17.0
+
+    cupertino_icons: 1.0.2
+    provider: 6.0.5
+    equatable: 2.0.5
+    flutter_bloc: 8.1.2
+    firebase_core: 2.7.0
+    firebase_auth: 4.2.9
+    google_sign_in: 6.0.2
+    flutter_facebook_auth: ^5.0.8
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    widgetbook: ^2.4.1
+
+    # rules and activating addiional ones.
+    flutter_lints: ^2.0.0
+    flutter_gen: 5.0.3
+    build_runner: null
+    flutter_gen_runner: null
+
+flutter:
+    generate: true
+    uses-material-design: true
+
+    # To add assets to your application, add an assets section, like this:
+    assets:
+        - assets/images/facebook_login.png
+        - assets/images/gmail_login.png
+        - assets/images/shield.png
+        - assets/images/fill.png
+        - assets/images/filter.png
+        - assets/images/twitter.png
+        - assets/images/media.png
+        - assets/images/paypal.png
+        - assets/images/facebook_card.png
+        - assets/images/gmail_card.png
+        - assets/images/quora.png
+        - assets/images/basecamp.png
+        - assets/images/upwork.png
+        - assets/images/start.png
+        - assets/images/mask.png
+
+    fonts:
+        - family: Poppins
+          fonts:
+              - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+
+flutter_gen:
+    colors:
+        inputs:
+            - assets/color/colors.xml
+flutter_intl:
+    enabled: true

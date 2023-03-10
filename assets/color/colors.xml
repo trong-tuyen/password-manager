@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#2196F3</color>
+    <color name="onPrimaryColor">#B69CF6</color>
+    <color name="secondaryColor">#85C9FF</color>
+    <color name="onSecondaryColor">#2196F3</color>
+    <color name="errorColor">#FF0000</color>
+    <color name="onErrorColor">#FFFFFF</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="onBackgroundColor">#7150F1</color>
+    <color name="surfaceColor">#6F6F6F</color>
+    <color name="onSurfaceColor">#3E3E3E</color>
+    <color name="onPrimaryBackgroundColor">#AA88F9</color>
+    <color name="secondaryBackgroundColor">#00000000</color>
+    <color name="cardTitlePassword">#898989</color>
+    <color name="visibilityColor">#939393</color>
+
+</resources>
