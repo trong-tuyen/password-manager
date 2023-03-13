@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           initialRoute: '/', // this is 'root'
           routes: {
-            '/WelcomePage': (context) => const WelcomePage(),
+            '/WelcomePage': (context) => const WelcomeScreen(),
             '/RegisterPage': (context) => const RegisterPage(),
             '/LoginPage': (context) => const LoginPage(),
             '/HomePage': (context) => const HomePage(),
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
               if (snapshot.hasData) {
                 return const HomePage();
               }
-              return const WelcomePage();
+              return const WelcomeScreen();
             },
           ),
         ),
